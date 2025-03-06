@@ -10,7 +10,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 public class ActividadLista extends ListActivity {
-    String[] ejercicios = {"TomarFoto","Juego","Sonidos"};
+    String[] ejercicios = {"TomarFoto","Juego","Sonidos","Ciclos","Contador","Validacion"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

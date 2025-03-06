@@ -64,8 +64,11 @@ public class ActividadSonidos extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent oIntent) {
         super.onActivityResult(requestCode, resultCode, oIntent);
         if (requestCode == 200) {
-            ArrayList<String> result = oIntent.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-            tvResultado.setText(result.get(0));
+            ArrayList<String> resultado = oIntent.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+            if (resultado != null && !resultado.isEmpty()) {
+                // Mostrar el primer resultado en el EditText
+                tvResultado.setText(resultado.get(0));
+            }
         }
     }
 }
